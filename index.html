@@ -133,6 +133,8 @@
     display:inline-block;background:#fdeeda;color:#9a6210;border:1px solid #f2cd8a;
     font-size:.7rem;font-weight:700;border-radius:999px;padding:1px 9px;margin-left:auto;letter-spacing:.4px;
   }
+  .mi-price{font-weight:800;color:var(--maroon);white-space:nowrap;margin-left:auto}
+  .star-tag + .mi-price{margin-left:8px}
 
   /* Gallery */
   .gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
@@ -181,11 +183,106 @@
   .reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
   .reveal.in{opacity:1;transform:none}
 
+  /* ---------- Booking ---------- */
+  .book-bg{background:linear-gradient(180deg,var(--cream),var(--cream-2))}
+  .book-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:26px;align-items:start}
+  .book-card{background:var(--card);border:1px solid #efdcbb;border-radius:var(--radius);box-shadow:var(--shadow);padding:28px}
+  .book-card h3{color:var(--maroon);font-size:1.3rem;margin-bottom:6px}
+  .book-card .hint{color:var(--muted);font-size:.92rem;margin-bottom:18px}
+  .f-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .f-group{margin-bottom:16px}
+  .f-group label{display:block;font-weight:700;color:var(--maroon);font-size:.92rem;margin-bottom:7px}
+  .f-group label .en{color:var(--muted);font-weight:600;font-size:.8rem}
+  .f-input,.f-select,textarea.f-input{
+    width:100%;padding:12px 14px;border:1.5px solid #e5d0a4;border-radius:12px;
+    font-size:.98rem;font-family:inherit;color:var(--ink);background:#fffdf7;
+  }
+  .f-input:focus,.f-select:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(217,154,38,.22)}
+  .stepper{display:inline-flex;align-items:center;gap:14px;background:#fffdf7;border:1.5px solid #e5d0a4;border-radius:999px;padding:6px 12px}
+  .stepper button{
+    width:34px;height:34px;border-radius:50%;border:none;cursor:pointer;
+    background:var(--maroon);color:#ffd98a;font-size:1.15rem;font-weight:700;line-height:1;
+  }
+  .stepper button:hover{background:var(--maroon-dark)}
+  .stepper .val{font-size:1.2rem;font-weight:800;color:var(--maroon);min-width:26px;text-align:center}
+  .preorder-list{border:1.5px solid #efdcbb;border-radius:14px;overflow:hidden}
+  .preorder-row{display:flex;align-items:center;gap:10px;padding:10px 14px;background:#fffdf7;border-bottom:1px dashed #ecd9ae}
+  .preorder-row:last-child{border-bottom:none}
+  .preorder-row .pname{flex:1;font-size:.95rem;color:#4d3a2a}
+  .preorder-row .pprice{font-weight:700;color:var(--maroon);font-size:.92rem;white-space:nowrap}
+  .mini-stepper{display:inline-flex;align-items:center;gap:9px}
+  .mini-stepper button{width:28px;height:28px;border-radius:50%;border:1.5px solid var(--maroon);background:#fff;color:var(--maroon);font-weight:800;cursor:pointer;line-height:1}
+  .mini-stepper button:hover{background:var(--maroon);color:#ffd98a}
+  .mini-stepper .qv{min-width:20px;text-align:center;font-weight:800;color:var(--maroon)}
+  .sum-box{background:linear-gradient(160deg,var(--maroon-dark),var(--maroon));color:#f7ead3;border-radius:14px;padding:20px}
+  .sum-box h4{color:#ffd98a;font-size:1.1rem;margin-bottom:12px}
+  .sum-line{display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px dashed rgba(255,217,138,.3);font-size:.95rem}
+  .sum-line:last-of-type{border-bottom:none}
+  .sum-total{display:flex;justify-content:space-between;align-items:center;margin-top:12px;padding-top:12px;border-top:2px solid rgba(255,217,138,.5);font-size:1.05rem;font-weight:700;color:#fff}
+  .sum-total .amt{font-size:1.5rem;color:#ffd98a}
+  .btn-book{
+    width:100%;margin-top:16px;border:none;cursor:pointer;
+    background:linear-gradient(180deg,#ffc44d,var(--gold));color:var(--maroon-dark);
+    padding:15px 20px;border-radius:999px;font-weight:800;font-size:1.02rem;font-family:inherit;
+    box-shadow:0 8px 20px rgba(109,18,32,.25);transition:transform .15s ease;
+  }
+  .btn-book:hover{transform:translateY(-2px)}
+  .no-min-note{background:#eaf7ee;border:1px solid #bfe6cc;color:#1d6b38;border-radius:12px;padding:11px 14px;font-size:.9rem;margin-bottom:16px}
+  .fee-note{background:#fdf1dc;border:1px solid #f2cd8a;color:#7c5410;border-radius:12px;padding:11px 14px;font-size:.9rem;margin-top:14px}
+  .status-badge{display:inline-block;font-size:.72rem;font-weight:800;border-radius:999px;padding:3px 11px;letter-spacing:.3px}
+  .st-pending{background:#fdf1dc;color:#9a6210;border:1px solid #f2cd8a}
+  .st-confirmed{background:#eaf7ee;color:#1d6b38;border:1px solid #bfe6cc}
+  .st-rejected{background:#fdecec;color:#a11d1d;border:1px solid #f3b8b8}
+  .my-booking{background:#fffdf7;border:1px solid #efdcbb;border-left:5px solid var(--gold);border-radius:12px;padding:14px 16px;margin-bottom:12px;font-size:.93rem}
+  .my-booking .top{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:center}
+  .btn-small{
+    border:1.5px solid var(--maroon);background:#fff;color:var(--maroon);border-radius:999px;
+    padding:6px 14px;font-size:.82rem;font-weight:700;cursor:pointer;font-family:inherit;
+  }
+  .btn-small:hover{background:var(--maroon);color:#ffd98a}
+  .btn-small.green{border-color:#1d7a3d;color:#1d7a3d}
+  .btn-small.green:hover{background:#1d7a3d;color:#fff}
+  .btn-small.red{border-color:#a11d1d;color:#a11d1d}
+  .btn-small.red:hover{background:#a11d1d;color:#fff}
+
+  /* ---------- Modals ---------- */
+  .modal{position:fixed;inset:0;z-index:100;background:rgba(46,7,13,.78);display:none;align-items:flex-start;justify-content:center;overflow-y:auto;padding:22px 14px}
+  .modal.open{display:flex}
+  .modal-box{background:var(--cream);border-radius:20px;max-width:520px;width:100%;padding:28px;box-shadow:0 24px 60px rgba(0,0,0,.4);position:relative;margin:auto}
+  .modal-box.wide{max-width:920px}
+  .modal-box h3{color:var(--maroon);font-size:1.45rem;text-align:center;margin-bottom:4px}
+  .modal-box .m-sub{text-align:center;color:var(--muted);font-size:.9rem;margin-bottom:18px}
+  .modal-close{position:absolute;top:12px;right:16px;background:none;border:none;font-size:1.5rem;color:var(--muted);cursor:pointer;line-height:1}
+  .qr-wrap{background:#fff;border:1px solid #efdcbb;border-radius:16px;padding:14px;max-width:300px;margin:0 auto}
+  .qr-wrap img{width:100%;height:auto;border-radius:8px}
+  .pay-amt{text-align:center;font-size:1.9rem;font-weight:800;color:var(--maroon);margin:14px 0 2px}
+  .kv{display:flex;justify-content:space-between;gap:12px;padding:7px 0;border-bottom:1px dashed #ecd9ae;font-size:.94rem}
+  .kv span:first-child{color:var(--muted)}
+  .kv span:last-child{font-weight:700;color:var(--ink);text-align:right}
+  .warn-box{background:#fdf1dc;border:1px solid #f2cd8a;color:#7c5410;border-radius:12px;padding:12px 14px;font-size:.88rem;margin-top:16px}
+  .admin-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:18px}
+  .admin-stat{background:#fffdf7;border:1px solid #efdcbb;border-radius:12px;padding:14px;text-align:center}
+  .admin-stat .num{font-size:1.5rem;font-weight:800;color:var(--maroon)}
+  .admin-stat .lbl{font-size:.78rem;color:var(--muted);letter-spacing:.4px;text-transform:uppercase}
+  .admin-booking{background:#fffdf7;border:1px solid #efdcbb;border-radius:12px;padding:14px 16px;margin-bottom:12px;font-size:.9rem}
+  .admin-booking .acts{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+  .admin-link{background:none;border:none;color:#a98d68;font-size:.85rem;cursor:pointer;text-decoration:underline;font-family:inherit}
+  .admin-link:hover{color:#ffd98a}
+
+  /* Print: sirf bill print ho */
+  #bill-print-area{display:none}
+  @media print{
+    body>*{display:none!important}
+    #bill-print-area{display:block!important;font-family:Georgia,serif;color:#000;padding:10px}
+    #bill-print-area table{width:100%;border-collapse:collapse;font-size:13px}
+    #bill-print-area td,#bill-print-area th{padding:3px 4px}
+  }
+
   /* ---------- Responsive ---------- */
   @media (max-width:900px){
     .menu-grid{grid-template-columns:repeat(2,1fr)}
     .gallery-grid{grid-template-columns:repeat(2,1fr)}
-    .about-grid,.visit-grid{grid-template-columns:1fr}
+    .about-grid,.visit-grid,.book-grid{grid-template-columns:1fr}
   }
   @media (max-width:640px){
     .burger{display:block}
@@ -197,6 +294,8 @@
     .nav-links.open{display:flex}
     .nav-links li{width:100%;padding:9px 0;border-bottom:1px solid rgba(255,217,138,.18)}
     .nav-links li:last-child{border-bottom:none}
+    .f-row{grid-template-columns:1fr}
+    .admin-stats{grid-template-columns:1fr 1fr 1fr;gap:8px}
     header .wrap{position:relative}
     .menu-grid,.gallery-grid{grid-template-columns:1fr}
     .about-points{grid-template-columns:1fr}
@@ -224,6 +323,7 @@
       <ul class="nav-links" id="navLinks">
         <li><a href="#about">About</a></li>
         <li><a href="#menu">Menu</a></li>
+        <li><a href="#book">🍽️ Book a Table</a></li>
         <li><a href="#gallery">Gallery</a></li>
         <li><a href="#visit">Visit Us</a></li>
         <li><a class="call-btn" href="tel:+917348022222">📞 Call Now</a></li>
@@ -240,7 +340,8 @@
     <p class="tagline">“Mithaas aur Swaad, 2004 se”</p>
     <p class="sub">Alambagh ki pehchan — shudh shakahari mithai, bakery aur restaurant. Subah ki jalebi se lekar raat ke khane tak, har swaad ek hi chhat ke neeche.</p>
     <div class="cta-row">
-      <a class="btn btn-gold" href="tel:+917348022222">📞 Call Now</a>
+      <a class="btn btn-gold" href="#book">🍽️ Book a Table</a>
+      <a class="btn btn-outline" href="tel:+917348022222">📞 Call Now</a>
       <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&amp;query=RajLuxmi%20Sweets%20%26%20Restaurant%2C%20Kanpur%20Road%2C%20Alambagh%2C%20Lucknow%20226005" target="_blank" rel="noopener">📍 Get Directions</a>
     </div>
     <div class="badges">
@@ -290,7 +391,15 @@
   </div>
 </section>
 
-<!-- ================= MENU ================= -->
+<!-- ================= MENU =================
+  Menu data sources (researched Oct 2026 — prices ONLY jahan public listing me price dikha):
+  - Justdial, Rajluxmi Sweets (Opp. Chander Nagar Gate, Alambagh): Mewa Bite ₹480, Diamond Pack ₹600, Rainbow Cake ₹815
+  - Justdial, Raj Luxmi (Alambagh): Laccha Paratha ₹70, Paneer Stuffed Kulcha ₹100, Plain Naan ₹70; must-order: Veg Jaipuri, Paneer Hyderabadi, Honey Chilli Potatoes
+  - magicpin menu, Rajluxmi Sweets & Restaurant (Alambagh): Roasted Papad ₹15, Fried Papad ₹23, Boondi Raita ₹50,
+    Schezwan Paneer Dry ₹140, Paneer Manchurian Dry ₹170, Paneer Chilli Dry ₹170, Paneer Salt & Pepper ₹170,
+    Veg Salt & Pepper ₹170, Veg Crispy ₹200, Paneer 65 ₹280; must-try: Chole Bhature, Deluxe Thali, Honey Chilli Potatoes, Laccha Paratha, Paneer Maharaja
+  - Baaki items inhi listings/reviews me naam se uplabdh hain, price verified nahi — isliye price-less rakhe gaye hain. Koi price invent nahi kiya gaya.
+-->
 <section id="menu" class="menu-bg">
   <div class="wrap">
     <div class="section-head reveal">
@@ -304,10 +413,13 @@
         <span class="ico">🍬</span>
         <h3>Sweets &amp; Mithai</h3>
         <ul>
-          <li>Mewa Bite <span class="star-tag">★ Popular</span></li>
+          <li>Mewa Bite <span class="star-tag">★ Popular</span> <span class="mi-price">₹480</span></li>
+          <li>Diamond Pack (Dry Fruit Gift Pack) <span class="mi-price">₹600</span></li>
           <li>Kaju Katli</li>
           <li>Motichoor Ladoo</li>
           <li>Gulab Jamun</li>
+          <li>Rasgulla</li>
+          <li>Kulfi Falooda</li>
           <li>Jalebi (Garam)</li>
           <li>Seasonal Mithai Variety</li>
         </ul>
@@ -316,23 +428,27 @@
         <span class="ico">🎂</span>
         <h3>Bakery &amp; Cakes</h3>
         <ul>
-          <li>Rainbow Cake <span class="star-tag">★ Popular</span></li>
+          <li>Rainbow Cake <span class="star-tag">★ Popular</span> <span class="mi-price">₹815</span></li>
           <li>Birthday &amp; Celebration Cakes</li>
-          <li>Pastries</li>
-          <li>Fresh Baked Goods</li>
-          <li>Cookies &amp; Rusks</li>
+          <li>Pastries &amp; Muffins</li>
+          <li>Cream Roll &amp; Doughnut</li>
+          <li>Cake Rusk &amp; Cookies</li>
+          <li>Fresh Breads (Milk / Multigrain)</li>
         </ul>
       </div>
       <div class="menu-card reveal">
         <span class="ico">🍛</span>
         <h3>North Indian &amp; Awadhi</h3>
         <ul>
-          <li>Veg Biryani <span class="star-tag">★ Popular</span></li>
-          <li>Paneer Specialities</li>
-          <li>Dal Tadka / Dal Makhani</li>
-          <li>Seasonal Sabzi</li>
-          <li>Tandoori Roti &amp; Naan</li>
-          <li>Jeera Rice</li>
+          <li>Deluxe Thali <span class="star-tag">★ Must Try</span></li>
+          <li>Paneer Maharaja <span class="star-tag">★ Must Try</span></li>
+          <li>Paneer Hyderabadi</li>
+          <li>Veg Jaipuri</li>
+          <li>Dal Makhani</li>
+          <li>Veg Biryani</li>
+          <li>Laccha Paratha <span class="mi-price">₹70</span></li>
+          <li>Paneer Stuffed Kulcha <span class="mi-price">₹100</span></li>
+          <li>Plain Naan <span class="mi-price">₹70</span></li>
         </ul>
       </div>
       <div class="menu-card reveal">
@@ -340,6 +456,9 @@
         <h3>South Indian</h3>
         <ul>
           <li>Masala Dosa</li>
+          <li>Rava Masala Dosa</li>
+          <li>Paneer Dosa</li>
+          <li>Mini South Indian Thali</li>
           <li>Idli Sambar</li>
           <li>Uttapam</li>
           <li>Vada Sambar</li>
@@ -350,27 +469,115 @@
         <span class="ico">🍜</span>
         <h3>Chinese &amp; Fast Food</h3>
         <ul>
+          <li>Paneer 65 <span class="mi-price">₹280</span></li>
+          <li>Paneer Chilli Dry <span class="mi-price">₹170</span></li>
+          <li>Paneer Manchurian Dry <span class="mi-price">₹170</span></li>
+          <li>Paneer Salt &amp; Pepper <span class="mi-price">₹170</span></li>
+          <li>Veg Crispy <span class="mi-price">₹200</span></li>
+          <li>Schezwan Paneer Dry <span class="mi-price">₹140</span></li>
+          <li>Veg Salt &amp; Pepper <span class="mi-price">₹170</span></li>
           <li>Spring Rolls <span class="star-tag">★ Popular</span></li>
+          <li>Honey Chilli Potatoes</li>
           <li>Hakka Noodles</li>
-          <li>Veg Manchurian</li>
-          <li>Fried Rice</li>
-          <li>Burger &amp; Sandwich</li>
         </ul>
       </div>
       <div class="menu-card reveal">
         <span class="ico">🥟</span>
         <h3>Street Food &amp; Snacks</h3>
         <ul>
+          <li>Chole Bhature <span class="star-tag">★ Must Try</span></li>
           <li>Samosa <span class="star-tag">★ Popular</span></li>
-          <li>Kachori Sabzi</li>
+          <li>Khasta Kachori Sabzi</li>
           <li>Aloo Tikki Chaat</li>
-          <li>Pani Puri (Golgappe)</li>
-          <li>Chole Bhature</li>
-          <li>Pav Bhaji</li>
+          <li>Dhokla</li>
+          <li>Roasted Papad <span class="mi-price">₹15</span></li>
+          <li>Fried Papad <span class="mi-price">₹23</span></li>
+          <li>Boondi Raita <span class="mi-price">₹50</span></li>
         </ul>
       </div>
     </div>
-    <p class="menu-note">Menu me items season aur availability ke hisaab se badal sakte hain. Aaj ka fresh menu jaanne ke liye humein call karein — <a href="tel:+917348022222" style="color:var(--maroon);font-weight:700">+91 73480 22222</a></p>
+    <p class="menu-note">Prices wale items hamare online listings (Justdial / magicpin) par adharit hain; bina price wale items ke rates counter par uplabdh hain. Menu me items season aur availability ke hisaab se badal sakte hain. Aaj ka fresh menu jaanne ke liye humein call karein — <a href="tel:+917348022222" style="color:var(--maroon);font-weight:700">+91 73480 22222</a></p>
+  </div>
+</section>
+
+<!-- ================= BOOK A TABLE ================= -->
+<section id="book" class="book-bg">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="kicker">Table Pre-Booking</div>
+      <h2>Book a Table — Table Pehle se Ready!</h2>
+      <p>Online table book karein, chaaho to khana bhi pehle se order kar dein. Aapke pahunchne par table ready milegi aur pre-order garam-garam serve hoga.</p>
+      <div class="divider"></div>
+    </div>
+
+    <div class="book-grid">
+      <!-- Booking form -->
+      <div class="book-card reveal">
+        <h3>📋 Booking Details</h3>
+        <p class="hint">3 asaan step: details bharein → UPI se payment karein → booking owner ke verify (✔) ke baad confirm. <b>Payment compulsory hai</b> — bina payment ke booking save nahi hoti.</p>
+        <div class="no-min-note">✅ <b>Koi minimum amount nahi hai!</b> Sirf table bhi book kar sakte hain — khana yahan aakar bhi order kar sakte hain. Har booking par sirf <b>₹100 Table Booking Fee</b> lagti hai, jo total me saaf-saaf dikhayi deti hai.</div>
+        <form id="booking-form" novalidate>
+          <div class="f-row">
+            <div class="f-group">
+              <label for="cust-name">👤 Aapka Naam <span class="en">(Your Name)</span></label>
+              <input class="f-input" type="text" id="cust-name" placeholder="e.g. Rahul Sharma" required>
+            </div>
+            <div class="f-group">
+              <label for="cust-phone">📱 Mobile Number</label>
+              <input class="f-input" type="tel" id="cust-phone" placeholder="10-digit mobile number" maxlength="10" inputmode="numeric" required>
+            </div>
+          </div>
+          <div class="f-row">
+            <div class="f-group">
+              <label for="book-date">📅 Booking Date</label>
+              <input class="f-input" type="date" id="book-date" required>
+            </div>
+            <div class="f-group">
+              <label for="book-arrival">🕙 Aap kab tak pahunchenge? <span class="en">(Expected Arrival Time)</span></label>
+              <input class="f-input" type="time" id="book-arrival" min="10:00" max="23:00" required>
+            </div>
+          </div>
+          <div class="f-group">
+            <label>👥 Kitne Guests? <span class="en">(Number of Guests)</span></label><br>
+            <span class="stepper">
+              <button type="button" id="guest-minus" aria-label="Guests kam karein">−</button>
+              <span class="val" id="guest-count">2</span>
+              <button type="button" id="guest-plus" aria-label="Guests badhayein">+</button>
+            </span>
+            <span style="color:var(--muted);font-size:.88rem;margin-left:10px">Table isi hisaab se ready rahegi</span>
+          </div>
+          <div class="f-group">
+            <label>🍽️ Khana Pehle se Order Karein? <span class="en">(Optional Pre-Order — quantity chunein)</span></label>
+            <div class="preorder-list" id="preorder-list"><!-- JS se bharta hai --></div>
+            <p style="color:var(--muted);font-size:.85rem;margin-top:8px">Sirf wahi items hain jinke rates hamare online listings par uplabdh hain. Baaki menu yahan aakar order kar sakte hain.</p>
+          </div>
+          <div class="f-group">
+            <label for="book-note">📝 Koi Khaas Baat? <span class="en">(Special Note — optional)</span></label>
+            <textarea class="f-input" id="book-note" rows="2" placeholder="e.g. Birthday hai, window side table chahiye, cake pe naam likhna hai..."></textarea>
+          </div>
+        </form>
+      </div>
+
+      <!-- Live summary -->
+      <div class="reveal">
+        <div class="sum-box">
+          <h4>🧾 Booking Summary</h4>
+          <div id="sum-items"><div class="sum-line"><span>Pre-order items</span><span>₹0</span></div></div>
+          <div class="sum-line"><span>Items Total</span><span id="sum-items-total">₹0</span></div>
+          <div class="sum-line"><span>Table Booking Fee</span><span>₹100</span></div>
+          <div class="sum-total"><span>Total Payable<br><small style="font-weight:400;font-size:.78rem;color:#ecd9ae">UPI se abhi pay karna hai</small></span><span class="amt" id="sum-grand">₹100</span></div>
+          <button type="button" class="btn-book" id="proceed-pay-btn">Proceed to Payment →</button>
+          <p style="font-size:.82rem;color:#ecd9ae;margin-top:12px">Payment ke baad booking <b style="color:#ffd98a">“Payment Verification Pending”</b> rahegi — restaurant owner apne UPI me payment milna check karke ✔ verify karega, tabhi booking <b style="color:#7ee787">Confirmed</b> hogi.</p>
+        </div>
+        <div class="fee-note">ℹ️ <b>Note:</b> Table Booking Fee ₹100 har online booking par lagti hai. Agar aap bina pre-order ke sirf table book karte hain, to kul payable sirf ₹100 hoga — koi minimum order nahi hai.</div>
+      </div>
+    </div>
+
+    <!-- My bookings (is device par ki gayi bookings) -->
+    <div id="my-bookings-wrap" style="margin-top:34px;display:none">
+      <h3 style="color:var(--maroon);font-size:1.3rem;margin-bottom:14px">🎟️ Meri Bookings <span style="font-size:.85rem;color:var(--muted);font-weight:400">(is device par)</span></h3>
+      <div id="my-bookings"></div>
+    </div>
   </div>
 </section>
 
@@ -458,8 +665,68 @@
     <p>📞 <a href="tel:+917348022222" style="color:#ffd98a">+91 73480 22222</a> &nbsp;•&nbsp; 🕙 10:00 AM – 11:00 PM, Open All Days</p>
     <p style="margin-top:14px">Made with <span class="heart">❤️</span> in Lucknow</p>
     <p class="copy">© 2026 RajLuxmi Sweets &amp; Restaurant. All rights reserved.</p>
+    <p style="margin-top:10px"><button type="button" class="admin-link" id="admin-open-btn">🔐 Owner Admin — Bookings &amp; Payment Verify</button></p>
   </div>
 </footer>
+
+<!-- ================= PAYMENT MODAL ================= -->
+<div class="modal" id="payment-modal" role="dialog" aria-modal="true">
+  <div class="modal-box">
+    <button type="button" class="modal-close" data-close="payment-modal" aria-label="Band karein">×</button>
+    <h3>💳 Pay karke Booking Confirm Karein</h3>
+    <p class="m-sub">Kisi bhi UPI app (Paytm / PhonePe / Google Pay / BHIM) se QR scan karke payment karein</p>
+    <div class="pay-amt" id="pay-amount">₹100</div>
+    <p style="text-align:center;color:var(--muted);font-size:.9rem;margin-bottom:12px">Pay <b id="pay-amount-text">₹100</b> to confirm booking</p>
+    <div class="qr-wrap"><img src="pay-qr.png" alt="Paytm UPI QR — payment karke booking confirm karein"></div>
+    <p style="text-align:center;font-size:.88rem;margin-top:10px">UPI ID: <b style="color:var(--maroon)">9506605427@ptyes</b> (Mrityunjay Mishra)</p>
+    <p style="text-align:center;margin-top:10px"><a class="btn-small green" id="upi-pay-link" href="#" style="display:inline-block;text-decoration:none;padding:9px 18px;font-size:.92rem">📲 UPI App se Pay Karein</a></p>
+    <div style="margin-top:16px">
+      <div class="kv"><span>Booking Code</span><span id="pay-code">—</span></div>
+      <div class="kv"><span>Naam</span><span id="pay-name">—</span></div>
+      <div class="kv"><span>Date</span><span id="pay-date">—</span></div>
+      <div class="kv"><span>Expected Arrival</span><span id="pay-arrival">—</span></div>
+      <div class="kv"><span>Guests</span><span id="pay-guests">—</span></div>
+    </div>
+    <div class="f-group" style="margin-top:16px">
+      <label for="pay-utr">UPI Ref / UTR Number <span style="color:var(--muted);font-weight:600;font-size:.8rem">(optional — payment app me milta hai, daalne se verify jaldi hota hai)</span></label>
+      <input class="f-input" type="text" id="pay-utr" placeholder="e.g. 4321XXXXXXXX">
+    </div>
+    <div class="warn-box">⏳ Payment ke baad neeche wala button dabayein. Booking <b>“Payment Verification Pending”</b> rahegi — owner apne UPI me payment check karke ✔ verify karega, tabhi <b>Confirmed</b> hogi. <b>Bina payment ke booking save nahi hogi.</b></div>
+    <button type="button" class="btn-book" id="payment-done-btn">✅ Payment Kar Diya — Booking Bhejo</button>
+    <button type="button" class="btn-book" id="payment-cancel-btn" style="background:#fff;border:2px solid var(--maroon);color:var(--maroon);box-shadow:none">Cancel — Payment Nahi Kiya</button>
+  </div>
+</div>
+
+<!-- ================= RECEIPT / SUCCESS MODAL ================= -->
+<div class="modal" id="receipt-modal" role="dialog" aria-modal="true">
+  <div class="modal-box">
+    <button type="button" class="modal-close" data-close="receipt-modal" aria-label="Band karein">×</button>
+    <h3 id="receipt-title">🎉 Booking Bhej Di Gayi!</h3>
+    <p class="m-sub">Ye booking token restaurant aane par dikhayein</p>
+    <div id="receipt-content"><!-- JS se bharta hai --></div>
+    <button type="button" class="btn-book" id="receipt-print-btn">🖨️ Print Bill</button>
+    <button type="button" class="btn-book" data-close="receipt-modal" style="background:#fff;border:2px solid var(--maroon);color:var(--maroon);box-shadow:none">Done</button>
+  </div>
+</div>
+
+<!-- ================= ADMIN MODAL ================= -->
+<div class="modal" id="admin-modal" role="dialog" aria-modal="true">
+  <div class="modal-box wide">
+    <button type="button" class="modal-close" data-close="admin-modal" aria-label="Band karein">×</button>
+    <h3>🔐 Owner Admin Dashboard</h3>
+    <p class="m-sub">Bookings, payment verification (✔) aur bill reprint — sirf restaurant owner ke liye</p>
+    <div class="admin-stats">
+      <div class="admin-stat"><div class="num" id="adm-stat-total">0</div><div class="lbl">Total Bookings</div></div>
+      <div class="admin-stat"><div class="num" id="adm-stat-pending">0</div><div class="lbl">Verify Pending</div></div>
+      <div class="admin-stat"><div class="num" id="adm-stat-revenue">₹0</div><div class="lbl">Verified Revenue</div></div>
+    </div>
+    <div class="warn-box" style="margin:0 0 16px">✔ <b>Payment Verify Gate:</b> “Payment Verification Pending” booking par pehle apne Paytm/UPI (9506605427@ptyes) me paisa aana check karein. Paisa mil gaya ho to green <b>✔ Payment Received — Verify</b> button dabayein — tabhi booking Confirmed hogi. Paisa nahi aaya ho to Reject karein.</div>
+    <div id="admin-bookings"><!-- JS se bharta hai --></div>
+  </div>
+</div>
+
+<!-- Bill print area (sirf print me dikhta hai) -->
+<div id="bill-print-area"></div>
 
 <script>
   // Mobile menu toggle
@@ -488,6 +755,438 @@
   } else {
     revealEls.forEach(function (el) { el.classList.add('in'); });
   }
+</script>
+
+<script>
+/* ============================================================
+   RAJLUXMI — TABLE BOOKING SYSTEM
+   Pattern Moh Maya Cafe booking flow se adapted:
+   Form -> UPI QR Payment (COMPULSORY) -> booking "Payment
+   Verification Pending" -> Owner Admin me ✔ verify -> Confirmed
+   -> Printable Bill. Bookings browser localStorage me save
+   hoti hain (demo build, single device).
+   Miller ke rules (Oct 2026):
+   - Koi minimum amount NAHI hai (sirf table bhi book ho sakti hai)
+   - Har booking par +₹100 Table Booking Fee (bill me itemised)
+   - Bina payment step complete kiye booking SAVE nahi hoti
+   - Customer apna EXPECTED ARRIVAL TIME khud batata hai
+   ============================================================ */
+(function () {
+  'use strict';
+
+  var UPI_ID = '9506605427@ptyes';       // Miller ka Paytm UPI (Moh Maya project wala hi QR/payload)
+  var UPI_PAYEE_NAME = 'Mrityunjay Mishra';
+  var TABLE_FEE = 100;                   // ₹100 Table Booking Fee — har booking par
+  var STORAGE_KEY = 'rajLuxmi_bookings';
+  var STATUS_PENDING = 'Payment Verification Pending';
+  var STATUS_CONFIRMED = 'Confirmed';
+  var STATUS_REJECTED = 'Rejected';
+
+  /* Pre-order ke liye sirf wahi items jinki price public listings me verified hai
+     (Justdial Alambagh + magicpin Alambagh menu — Oct 2026). Bina verified price
+     wala item pre-order/total me nahi aayega. */
+  var PRICED_ITEMS = [
+    { id: 'p1',  name: 'Mewa Bite', price: 480 },
+    { id: 'p2',  name: 'Diamond Pack (Dry Fruit Gift Pack)', price: 600 },
+    { id: 'p3',  name: 'Rainbow Cake', price: 815 },
+    { id: 'p4',  name: 'Laccha Paratha', price: 70 },
+    { id: 'p5',  name: 'Paneer Stuffed Kulcha', price: 100 },
+    { id: 'p6',  name: 'Plain Naan', price: 70 },
+    { id: 'p7',  name: 'Paneer 65', price: 280 },
+    { id: 'p8',  name: 'Paneer Chilli Dry', price: 170 },
+    { id: 'p9',  name: 'Paneer Manchurian Dry', price: 170 },
+    { id: 'p10', name: 'Paneer Salt & Pepper', price: 170 },
+    { id: 'p11', name: 'Veg Crispy', price: 200 },
+    { id: 'p12', name: 'Schezwan Paneer Dry', price: 140 },
+    { id: 'p13', name: 'Veg Salt & Pepper', price: 170 },
+    { id: 'p14', name: 'Roasted Papad', price: 15 },
+    { id: 'p15', name: 'Fried Papad', price: 23 },
+    { id: 'p16', name: 'Boondi Raita', price: 50 }
+  ];
+
+  var guests = 2;
+  var cart = {};               // { itemId: qty }
+  var bookings = [];
+  var pendingBooking = null;   // payment modal khula hai — abhi SAVE nahi hua
+  var latestCode = '';
+
+  /* ---------- helpers ---------- */
+  function $(id) { return document.getElementById(id); }
+  function esc(s) {
+    return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  }
+  function fmtDateTime(ts) {
+    var d = new Date(ts);
+    return d.toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' }) + ', ' +
+           d.toLocaleTimeString('en-IN', { hour: 'numeric', minute: '2-digit', hour12: true });
+  }
+  function fmtTime(t) { // "19:30" -> "7:30 PM"
+    if (!t) return '—';
+    var p = t.split(':'), h = parseInt(p[0], 10), m = p[1] || '00';
+    var ap = h >= 12 ? 'PM' : 'AM'; h = h % 12; if (h === 0) h = 12;
+    return h + ':' + m + ' ' + ap;
+  }
+  function arrivalDateTime(b) {
+    var d = new Date(b.date + 'T' + (b.arrivalTime || '19:00') + ':00');
+    return isNaN(d.getTime()) ? null : d;
+  }
+  function estimatedServingText(b) {
+    var d = arrivalDateTime(b);
+    if (!d) return 'Aapke pahunchne ke ~15 min ke andar (approx.)';
+    var s = new Date(d.getTime() + 15 * 60 * 1000);
+    return 'Pre-order aapke pahunchne ke ~15 min me serve hoga — approx. ' +
+           s.toLocaleTimeString('en-IN', { hour: 'numeric', minute: '2-digit', hour12: true });
+  }
+  function badge(status) {
+    if (status === STATUS_PENDING) return '<span class="status-badge st-pending">⏳ Payment Verification Pending</span>';
+    if (status === STATUS_CONFIRMED) return '<span class="status-badge st-confirmed">✓ Confirmed</span>';
+    if (status === STATUS_REJECTED) return '<span class="status-badge st-rejected">✗ Rejected — Payment Not Received</span>';
+    return '<span class="status-badge">' + esc(status) + '</span>';
+  }
+  function saveBookings() { try { localStorage.setItem(STORAGE_KEY, JSON.stringify(bookings)); } catch (e) {} }
+  function loadBookings() {
+    try {
+      var raw = localStorage.getItem(STORAGE_KEY);
+      bookings = raw ? JSON.parse(raw) : [];
+      if (!Array.isArray(bookings)) bookings = [];
+    } catch (e) { bookings = []; }
+  }
+  function openModal(id) { $(id).classList.add('open'); }
+  function closeModal(id) { $(id).classList.remove('open'); }
+  function cartItems() {
+    var out = [];
+    PRICED_ITEMS.forEach(function (it) {
+      var q = cart[it.id] || 0;
+      if (q > 0) out.push({ id: it.id, name: it.name, qty: q, price: it.price });
+    });
+    return out;
+  }
+  function itemsTotal() {
+    return cartItems().reduce(function (s, i) { return s + i.price * i.qty; }, 0);
+  }
+
+  /* ---------- pre-order list render ---------- */
+  function renderPreorder() {
+    var html = '';
+    PRICED_ITEMS.forEach(function (it) {
+      var q = cart[it.id] || 0;
+      html += '<div class="preorder-row">' +
+        '<span class="pname">' + esc(it.name) + '</span>' +
+        '<span class="pprice">₹' + it.price + '</span>' +
+        '<span class="mini-stepper">' +
+          '<button type="button" data-cart="' + it.id + '" data-d="-1" aria-label="Kam karein">−</button>' +
+          '<span class="qv">' + q + '</span>' +
+          '<button type="button" data-cart="' + it.id + '" data-d="1" aria-label="Badhayein">+</button>' +
+        '</span></div>';
+    });
+    $('preorder-list').innerHTML = html;
+    var btns = $('preorder-list').querySelectorAll('button[data-cart]');
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].addEventListener('click', function () {
+        var id = this.getAttribute('data-cart'), d = parseInt(this.getAttribute('data-d'), 10);
+        var q = (cart[id] || 0) + d;
+        if (q < 0) q = 0; if (q > 20) q = 20;
+        cart[id] = q;
+        renderPreorder(); renderSummary();
+      });
+    }
+  }
+
+  /* ---------- live summary ---------- */
+  function renderSummary() {
+    var items = cartItems(), it = itemsTotal(), grand = it + TABLE_FEE;
+    if (items.length) {
+      $('sum-items').innerHTML = items.map(function (i) {
+        return '<div class="sum-line"><span>' + esc(i.name) + ' × ' + i.qty + '</span><span>₹' + (i.price * i.qty) + '</span></div>';
+      }).join('');
+    } else {
+      $('sum-items').innerHTML = '<div class="sum-line"><span>Pre-order items</span><span>₹0</span></div>';
+    }
+    $('sum-items-total').textContent = '₹' + it;
+    $('sum-grand').textContent = '₹' + grand;
+    $('proceed-pay-btn').textContent = 'Proceed to Payment → ₹' + grand;
+  }
+
+  /* ---------- step 1: form validate -> payment modal (booking abhi save NAHI) ---------- */
+  function proceedToPayment() {
+    var name = $('cust-name').value.trim();
+    var phone = $('cust-phone').value.trim();
+    var date = $('book-date').value;
+    var arrival = $('book-arrival').value;
+    var note = $('book-note').value.trim();
+
+    if (!name) { alert('Kripya apna naam likhein.'); $('cust-name').focus(); return; }
+    if (!/^[0-9]{10}$/.test(phone)) { alert('Kripya sahi 10-digit mobile number likhein.'); $('cust-phone').focus(); return; }
+    if (!date) { alert('Kripya booking ki date chunein.'); $('book-date').focus(); return; }
+    if (!arrival) { alert('Kripya batayein ki aap kab tak pahunchenge (Expected Arrival Time).'); $('book-arrival').focus(); return; }
+    if (arrival < '10:00' || arrival > '23:00') { alert('Restaurant subah 10:00 AM se raat 11:00 PM tak khula hai — kripya isi beech ka arrival time chunein.'); $('book-arrival').focus(); return; }
+
+    var items = cartItems(), it = itemsTotal();
+    var now = Date.now();
+    pendingBooking = {
+      code: 'RL-' + Math.floor(100000 + Math.random() * 900000),
+      name: name, phone: phone, date: date, arrivalTime: arrival,
+      guests: guests, note: note,
+      items: items, itemsTotal: it, tableFee: TABLE_FEE, total: it + TABLE_FEE,
+      status: STATUS_PENDING, paymentClaimed: false, utr: '',
+      orderTimestamp: now, orderTimeText: fmtDateTime(now)
+    };
+
+    $('pay-amount').textContent = '₹' + pendingBooking.total;
+    $('pay-amount-text').textContent = '₹' + pendingBooking.total;
+    $('pay-code').textContent = pendingBooking.code;
+    $('pay-name').textContent = pendingBooking.name;
+    $('pay-date').textContent = pendingBooking.date;
+    $('pay-arrival').textContent = fmtTime(pendingBooking.arrivalTime);
+    $('pay-guests').textContent = pendingBooking.guests;
+    $('pay-utr').value = '';
+    // UPI deep link — amount auto-filled (jahan UPI app support kare)
+    $('upi-pay-link').href = 'upi://pay?pa=' + UPI_ID + '&pn=' + encodeURIComponent(UPI_PAYEE_NAME) +
+      '&am=' + pendingBooking.total + '&cu=INR&tn=' + encodeURIComponent('RajLuxmi Table Booking ' + pendingBooking.code);
+    openModal('payment-modal');
+  }
+
+  /* ---------- step 2: payment done -> TAB booking save hoti hai ---------- */
+  function paymentDone() {
+    if (!pendingBooking) { closeModal('payment-modal'); return; }
+    pendingBooking.utr = $('pay-utr').value.trim();
+    pendingBooking.paymentClaimed = true;
+    pendingBooking.paymentClaimedAt = Date.now();
+    bookings.unshift(pendingBooking);
+    latestCode = pendingBooking.code;
+    saveBookings();
+    var saved = pendingBooking;
+    pendingBooking = null;
+    closeModal('payment-modal');
+    renderMyBookings();
+    showReceipt(saved);
+    // form reset (agali booking ke liye)
+    cart = {}; renderPreorder(); renderSummary();
+    $('booking-form').reset(); initDate(); $('book-arrival').value = '19:00';
+  }
+
+  /* Cancel par booking discard — kuch save nahi hota (payment compulsory rule) */
+  function paymentCancel() {
+    pendingBooking = null;
+    closeModal('payment-modal');
+    alert('Booking cancel kar di gayi. Bina payment ke booking save nahi hoti — jab ready hon, dobara book karke UPI payment complete karein.');
+  }
+
+  /* ---------- receipt / success screen ---------- */
+  function receiptHtml(b) {
+    var itemsHtml = (b.items && b.items.length)
+      ? b.items.map(function (i) {
+          return '<div class="kv"><span>' + esc(i.name) + ' × ' + i.qty + '</span><span>₹' + (i.price * i.qty) + '</span></div>';
+        }).join('')
+      : '<div class="kv"><span>Pre-order items</span><span>Koi nahi (sirf table)</span></div>';
+    var statusLine = b.status === STATUS_PENDING
+      ? '<div style="margin-top:12px">' + badge(b.status) + '<p style="font-size:.86rem;color:var(--muted);margin-top:6px">Owner apne UPI me payment check karke ✔ verify karega — uske baad booking Confirmed hogi.</p></div>'
+      : '<div style="margin-top:12px">' + badge(b.status) + '</div>';
+    return '' +
+      '<div class="kv"><span>Booking Code</span><span style="color:var(--maroon)">' + b.code + '</span></div>' +
+      '<div class="kv"><span>Customer Name</span><span>' + esc(b.name) + '</span></div>' +
+      '<div class="kv"><span>Phone</span><span>' + esc(b.phone) + '</span></div>' +
+      '<div class="kv"><span>Order Time (Booked at)</span><span>' + (b.orderTimeText || fmtDateTime(b.orderTimestamp)) + '</span></div>' +
+      '<div class="kv"><span>Booking Date</span><span>' + esc(b.date) + '</span></div>' +
+      '<div class="kv"><span>Expected Arrival</span><span>' + fmtTime(b.arrivalTime) + '</span></div>' +
+      '<div class="kv"><span>Guests</span><span>' + b.guests + '</span></div>' +
+      (b.note ? '<div class="kv"><span>Special Note</span><span>' + esc(b.note) + '</span></div>' : '') +
+      itemsHtml +
+      '<div class="kv"><span>Items Total</span><span>₹' + b.itemsTotal + '</span></div>' +
+      '<div class="kv"><span>Table Booking Fee</span><span>₹' + b.tableFee + '</span></div>' +
+      '<div class="kv" style="border-bottom:none;font-size:1.05rem"><span>Total Paid via UPI</span><span style="color:var(--maroon)">₹' + b.total + '</span></div>' +
+      (b.utr ? '<div class="kv"><span>UPI Ref / UTR</span><span>' + esc(b.utr) + '</span></div>' : '') +
+      '<p style="font-size:.9rem;color:var(--muted);margin-top:12px">🍽️ <b>Estimated Serving:</b> ' + estimatedServingText(b) + '</p>' +
+      statusLine;
+  }
+  function showReceipt(b) {
+    latestCode = b.code;
+    $('receipt-title').textContent = b.status === STATUS_CONFIRMED ? '🎉 Booking Confirmed!' :
+      (b.status === STATUS_REJECTED ? 'Booking Rejected' : '🎉 Booking Bhej Di Gayi!');
+    $('receipt-content').innerHTML = receiptHtml(b);
+    openModal('receipt-modal');
+  }
+  function findBooking(code) {
+    for (var i = 0; i < bookings.length; i++) if (bookings[i].code === code) return bookings[i];
+    return null;
+  }
+
+  /* ---------- printable bill (Moh Maya pattern: naam ke saath poora bill) ---------- */
+  function printBill(b) {
+    var dishRows = (b.items && b.items.length)
+      ? b.items.map(function (i) {
+          return '<tr><td>' + esc(i.name) + '</td><td style="text-align:center">' + i.qty + '</td>' +
+                 '<td style="text-align:right">₹' + i.price + '</td><td style="text-align:right">₹' + (i.price * i.qty) + '</td></tr>';
+        }).join('')
+      : '<tr><td colspan="4" style="text-align:center">No pre-ordered dishes (sirf table booking)</td></tr>';
+    $('bill-print-area').innerHTML =
+      '<div style="text-align:center;border-bottom:2px dashed #333;padding-bottom:10px">' +
+        '<div style="font-size:23px;font-weight:bold;letter-spacing:1px">RAJLUXMI SWEETS &amp; RESTAURANT</div>' +
+        '<div style="font-size:12px">Opposite Chander Nagar Gate, Moni Baba Market, Kanpur Road, Alambagh, Lucknow — 226005</div>' +
+        '<div style="font-size:12px">Phone: +91 73480 22222 &nbsp;•&nbsp; Open Daily: 10:00 AM – 11:00 PM</div>' +
+        '<div style="font-size:16px;font-weight:bold;margin-top:8px">— TABLE BOOKING BILL —</div>' +
+      '</div>' +
+      '<table style="margin-top:10px">' +
+        '<tr><td>Customer Name:</td><td style="text-align:right"><b style="font-size:15px">' + esc(b.name) + '</b></td></tr>' +
+        '<tr><td>Phone:</td><td style="text-align:right">' + esc(b.phone) + '</td></tr>' +
+        '<tr><td>Booking Code:</td><td style="text-align:right">' + b.code + '</td></tr>' +
+        '<tr><td>Order Time:</td><td style="text-align:right">' + (b.orderTimeText || fmtDateTime(b.orderTimestamp)) + '</td></tr>' +
+        '<tr><td>Booking Date:</td><td style="text-align:right">' + esc(b.date) + '</td></tr>' +
+        '<tr><td>Expected Arrival:</td><td style="text-align:right">' + fmtTime(b.arrivalTime) + '</td></tr>' +
+        '<tr><td>Guests:</td><td style="text-align:right">' + b.guests + '</td></tr>' +
+        '<tr><td>Estimated Serving:</td><td style="text-align:right">' + estimatedServingText(b) + '</td></tr>' +
+        '<tr><td>Status:</td><td style="text-align:right">' + esc(b.status) + '</td></tr>' +
+        (b.utr ? '<tr><td>UPI Ref / UTR:</td><td style="text-align:right">' + esc(b.utr) + '</td></tr>' : '') +
+        (b.note ? '<tr><td>Note:</td><td style="text-align:right">' + esc(b.note) + '</td></tr>' : '') +
+      '</table>' +
+      '<div style="border-top:2px dashed #333;margin-top:10px;padding-top:8px"><b>PRE-ORDERED ITEMS</b>' +
+        '<table><tr><th style="text-align:left">Item</th><th>Qty</th><th style="text-align:right">Price</th><th style="text-align:right">Amount</th></tr>' +
+        dishRows +
+        '<tr><td colspan="3"><b>Items Total</b></td><td style="text-align:right"><b>₹' + b.itemsTotal + '</b></td></tr></table></div>' +
+      '<div style="border-top:2px dashed #333;margin-top:10px;padding-top:8px"><table>' +
+        '<tr><td>Table Booking Fee</td><td style="text-align:right">₹' + b.tableFee + '</td></tr>' +
+        '<tr><td><b>TOTAL PAID VIA UPI</b></td><td style="text-align:right"><b>₹' + b.total + '</b></td></tr></table></div>' +
+      '<div style="text-align:center;border-top:2px dashed #333;margin-top:12px;padding-top:10px;font-size:12px">' +
+        '<div>Prices inclusive of all taxes.</div>' +
+        '<div style="margin-top:6px;font-size:14px"><b>Thank you for booking at RajLuxmi!</b></div>' +
+        '<div>— Alambagh, Lucknow —</div></div>';
+    window.print();
+  }
+
+  /* ---------- my bookings (customer side, is device par) ---------- */
+  function renderMyBookings() {
+    var wrap = $('my-bookings-wrap'), box = $('my-bookings');
+    if (!bookings.length) { wrap.style.display = 'none'; box.innerHTML = ''; return; }
+    wrap.style.display = 'block';
+    box.innerHTML = bookings.map(function (b) {
+      return '<div class="my-booking"><div class="top"><b style="color:var(--maroon)">' + b.code + '</b>' + badge(b.status) + '</div>' +
+        '<div style="margin-top:6px">' + esc(b.name) + ' • ' + esc(b.date) + ' • Arrival ' + fmtTime(b.arrivalTime) + ' • ' + b.guests + ' guests • <b>₹' + b.total + '</b></div>' +
+        '<div style="margin-top:8px;display:flex;gap:8px;flex-wrap:wrap">' +
+          '<button type="button" class="btn-small" data-view="' + b.code + '">View / Bill</button>' +
+        '</div></div>';
+    }).join('');
+    var btns = box.querySelectorAll('button[data-view]');
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].addEventListener('click', function () {
+        var b = findBooking(this.getAttribute('data-view'));
+        if (b) showReceipt(b);
+      });
+    }
+  }
+
+  /* ---------- admin dashboard (Moh Maya jaisa simple gate: Owner button se khulta hai) ---------- */
+  function renderAdmin() {
+    $('adm-stat-total').textContent = bookings.length;
+    $('adm-stat-pending').textContent = bookings.filter(function (b) { return b.status === STATUS_PENDING; }).length;
+    $('adm-stat-revenue').textContent = '₹' + bookings
+      .filter(function (b) { return b.status === STATUS_CONFIRMED; })
+      .reduce(function (s, b) { return s + (b.total || 0); }, 0);
+    var box = $('admin-bookings');
+    if (!bookings.length) {
+      box.innerHTML = '<p style="color:var(--muted);text-align:center;padding:16px">Abhi koi booking nahi aayi hai.</p>';
+      return;
+    }
+    box.innerHTML = bookings.map(function (b, idx) {
+      var itemsLine = (b.items && b.items.length)
+        ? b.items.map(function (i) { return esc(i.name) + ' ×' + i.qty + ' (₹' + (i.price * i.qty) + ')'; }).join(', ')
+        : 'Sirf table (koi pre-order nahi)';
+      var acts = '';
+      if (b.status === STATUS_PENDING) {
+        acts += '<button type="button" class="btn-small green" data-verify="' + idx + '">✔ Payment Received — Verify</button>' +
+                '<button type="button" class="btn-small red" data-reject="' + idx + '">✗ Reject</button>';
+      }
+      acts += '<button type="button" class="btn-small" data-bill="' + idx + '">🖨️ Bill Print</button>' +
+              '<button type="button" class="btn-small red" data-del="' + idx + '">Delete</button>';
+      return '<div class="admin-booking"><div class="top" style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:center">' +
+          '<b style="color:var(--maroon)">' + b.code + '</b>' + badge(b.status) + '</div>' +
+        '<div style="margin-top:6px"><b>' + esc(b.name) + '</b> (' + esc(b.phone) + ') • Booked: ' + (b.orderTimeText || fmtDateTime(b.orderTimestamp)) + '</div>' +
+        '<div>Date: <b>' + esc(b.date) + '</b> • Expected Arrival: <b>' + fmtTime(b.arrivalTime) + '</b> • Guests: ' + b.guests + '</div>' +
+        '<div>Items: ' + itemsLine + '</div>' +
+        '<div>Items Total ₹' + b.itemsTotal + ' + Table Booking Fee ₹' + b.tableFee + ' = <b>Total ₹' + b.total + '</b>' +
+          (b.utr ? ' • UTR: <b>' + esc(b.utr) + '</b>' : ' • UTR: —') + '</div>' +
+        (b.note ? '<div>Note: ' + esc(b.note) + '</div>' : '') +
+        (b.status === STATUS_PENDING ? '<div style="color:#9a6210;font-size:.85rem;margin-top:4px">Customer ne payment claim kiya hai' + (b.paymentClaimedAt ? ' (' + fmtDateTime(b.paymentClaimedAt) + ')' : '') + '. Apne Paytm/UPI (' + UPI_ID + ') me ₹' + b.total + ' aana check karke ✔ dabayein.</div>' : '') +
+        '<div class="acts">' + acts + '</div></div>';
+    }).join('');
+
+    function bind(attr, fn) {
+      var els = box.querySelectorAll('button[' + attr + ']');
+      for (var i = 0; i < els.length; i++) {
+        els[i].addEventListener('click', function () { fn(parseInt(this.getAttribute(attr), 10)); });
+      }
+    }
+    bind('data-verify', verifyPayment);
+    bind('data-reject', rejectPayment);
+    bind('data-bill', function (idx) { if (bookings[idx]) printBill(bookings[idx]); });
+    bind('data-del', deleteBooking);
+  }
+
+  // THE TICK — owner ke ✔ ke bina booking Confirmed nahi hoti (Moh Maya pattern)
+  function verifyPayment(idx) {
+    var b = bookings[idx];
+    if (!b || b.status !== STATUS_PENDING) return;
+    if (!confirm('Confirm karun? Pehle check kar lo ki ' + b.name + ' ka ₹' + b.total + ' tumhare Paytm/UPI (' + UPI_ID + ') me aa gaya hai.\n\nBooking: ' + b.code)) return;
+    b.status = STATUS_CONFIRMED;
+    b.verifiedAt = Date.now();
+    saveBookings(); renderAdmin(); renderMyBookings();
+  }
+  function rejectPayment(idx) {
+    var b = bookings[idx];
+    if (!b || b.status !== STATUS_PENDING) return;
+    if (!confirm('Reject karun? ' + b.name + ' ki booking ' + b.code + ' (₹' + b.total + ') — payment nahi mila, isliye reject ho jayegi.')) return;
+    b.status = STATUS_REJECTED;
+    b.rejectedAt = Date.now();
+    saveBookings(); renderAdmin(); renderMyBookings();
+  }
+  function deleteBooking(idx) {
+    if (!bookings[idx]) return;
+    if (!confirm('Delete this booking from records?')) return;
+    bookings.splice(idx, 1);
+    saveBookings(); renderAdmin(); renderMyBookings();
+  }
+
+  /* ---------- init ---------- */
+  function initDate() {
+    var today = new Date();
+    var iso = today.getFullYear() + '-' + String(today.getMonth() + 1).padStart(2, '0') + '-' + String(today.getDate()).padStart(2, '0');
+    var d = $('book-date');
+    d.min = iso;
+    if (!d.value) d.value = iso;
+  }
+  function init() {
+    loadBookings();
+    initDate();
+    $('book-arrival').value = '19:00';
+    renderPreorder(); renderSummary(); renderMyBookings();
+
+    $('guest-minus').addEventListener('click', function () { if (guests > 1) guests--; $('guest-count').textContent = guests; });
+    $('guest-plus').addEventListener('click', function () { if (guests < 20) guests++; $('guest-count').textContent = guests; });
+    $('proceed-pay-btn').addEventListener('click', proceedToPayment);
+    $('payment-done-btn').addEventListener('click', paymentDone);
+    $('payment-cancel-btn').addEventListener('click', paymentCancel);
+    $('receipt-print-btn').addEventListener('click', function () { var b = findBooking(latestCode); if (b) printBill(b); });
+    $('admin-open-btn').addEventListener('click', function () { loadBookings(); renderAdmin(); openModal('admin-modal'); });
+
+    var closers = document.querySelectorAll('[data-close]');
+    for (var i = 0; i < closers.length; i++) {
+      closers[i].addEventListener('click', function () {
+        var id = this.getAttribute('data-close');
+        if (id === 'payment-modal' && pendingBooking) { paymentCancel(); return; }
+        closeModal(id);
+      });
+    }
+    // Backdrop click par payment modal band = cancel (booking save nahi hogi)
+    $('payment-modal').addEventListener('click', function (e) { if (e.target === this && pendingBooking) paymentCancel(); });
+    var others = ['receipt-modal', 'admin-modal'];
+    others.forEach(function (id) {
+      $(id).addEventListener('click', function (e) { if (e.target === this) closeModal(id); });
+    });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+  else init();
+})();
 </script>
 </body>
 </html>
