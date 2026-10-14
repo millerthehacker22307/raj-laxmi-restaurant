@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RajLuxmi Sweets &amp; Restaurant — Alambagh, Lucknow | Mithaas aur Swaad, 2004 se</title>
+<meta name="description" content="RajLuxmi Sweets & Restaurant — pure veg sweets, bakery and restaurant at Alambagh, Lucknow. North Indian, Awadhi, South Indian, Chinese, street food and mithai. Open daily 10 AM – 11 PM.">
+<style>
+  :root{
+    --cream:#fdf6ec;
+    --cream-2:#f7ead3;
+    --maroon:#6d1220;
+    --maroon-dark:#4a0b15;
+    --gold:#d99a26;
+    --saffron:#ef8f2c;
+    --ink:#33241a;
+    --muted:#7a6653;
+    --card:#fffaf1;
+    --shadow:0 10px 30px rgba(109,18,32,.14);
+    --radius:18px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:"Segoe UI",system-ui,-apple-system,Roboto,"Helvetica Neue",Arial,sans-serif;
+    background:var(--cream);
+    color:var(--ink);
+    line-height:1.6;
+  }
+  h1,h2,h3,.brand-name{font-family:Georgia,"Times New Roman",serif}
+  img{max-width:100%;display:block}
+  a{text-decoration:none}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+
+  /* ---------- Nav ---------- */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:linear-gradient(90deg,var(--maroon-dark),var(--maroon));
+    box-shadow:0 4px 18px rgba(0,0,0,.25);
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 0}
+  .brand{display:flex;align-items:center;gap:12px;color:#fff}
+  .brand-badge{
+    width:46px;height:46px;border-radius:50%;flex:0 0 auto;
+    background:radial-gradient(circle at 35% 30%,#ffd98a,var(--gold) 60%,#b97a12);
+    display:flex;align-items:center;justify-content:center;
+    font-size:24px;box-shadow:inset 0 0 0 2px rgba(255,255,255,.45);
+  }
+  .brand-name{font-size:1.3rem;line-height:1.15;font-weight:700;letter-spacing:.3px}
+  .brand-sub{font-size:.72rem;letter-spacing:2.5px;text-transform:uppercase;color:#ffd98a}
+  .nav-links{display:flex;align-items:center;gap:26px;list-style:none}
+  .nav-links a{color:#f7ead3;font-weight:600;font-size:.95rem}
+  .nav-links a:hover{color:#ffd98a}
+  .call-btn{
+    background:var(--gold);color:var(--maroon-dark)!important;
+    padding:9px 18px;border-radius:999px;font-weight:700;
+    box-shadow:0 4px 12px rgba(0,0,0,.25);
+  }
+  .call-btn:hover{background:#ffc44d;color:var(--maroon-dark)!important}
+  .burger{display:none;background:none;border:none;cursor:pointer;padding:6px}
+  .burger span{display:block;width:26px;height:3px;background:#ffd98a;margin:5px 0;border-radius:2px}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    background:
+      radial-gradient(900px 420px at 85% -10%,rgba(239,143,44,.35),transparent 60%),
+      radial-gradient(700px 380px at 8% 110%,rgba(217,154,38,.28),transparent 60%),
+      linear-gradient(155deg,var(--maroon-dark) 0%,var(--maroon) 55%,#8c1d2f 100%);
+    color:#fff;text-align:center;padding:84px 0 76px;position:relative;overflow:hidden;
+  }
+  .hero::before,.hero::after{
+    content:"✦";position:absolute;color:rgba(255,217,138,.16);font-size:120px;line-height:1;
+  }
+  .hero::before{top:6px;left:4%}
+  .hero::after{bottom:-18px;right:4%}
+  .hero .om{font-size:2rem;color:#ffd98a}
+  .hero h1{font-size:clamp(2.4rem,6.2vw,4.1rem);line-height:1.08;margin:10px 0 6px;text-shadow:0 3px 14px rgba(0,0,0,.35)}
+  .hero h1 .gold{color:#ffd98a}
+  .tagline{font-size:clamp(1.05rem,2.6vw,1.45rem);color:#ffe9bd;font-style:italic;margin-bottom:14px}
+  .hero p.sub{max-width:640px;margin:0 auto 28px;color:#f3e3c8;font-size:1rem}
+  .cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:30px}
+  .btn{
+    display:inline-flex;align-items:center;gap:9px;
+    padding:13px 28px;border-radius:999px;font-weight:700;font-size:1rem;
+    transition:transform .15s ease,box-shadow .15s ease;
+  }
+  .btn:hover{transform:translateY(-2px)}
+  .btn-gold{background:linear-gradient(180deg,#ffc44d,var(--gold));color:var(--maroon-dark);box-shadow:0 8px 20px rgba(0,0,0,.3)}
+  .btn-outline{border:2px solid #ffd98a;color:#ffe9bd;background:rgba(255,255,255,.05)}
+  .badges{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+  .badge{
+    background:rgba(255,255,255,.1);border:1px solid rgba(255,217,138,.55);
+    color:#ffe9bd;padding:7px 16px;border-radius:999px;font-size:.88rem;font-weight:600;
+  }
+  .badge .dot{color:#7ee787}
+
+  /* ---------- Sections ---------- */
+  section{padding:72px 0}
+  .section-head{text-align:center;margin-bottom:42px}
+  .section-head .kicker{color:var(--saffron);font-weight:700;letter-spacing:3px;text-transform:uppercase;font-size:.78rem}
+  .section-head h2{font-size:clamp(1.8rem,4vw,2.5rem);color:var(--maroon);margin:6px 0 8px}
+  .section-head p{color:var(--muted);max-width:620px;margin:0 auto}
+  .divider{width:74px;height:4px;border-radius:2px;background:linear-gradient(90deg,var(--saffron),var(--gold));margin:14px auto 0}
+
+  /* About */
+  .about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:36px;align-items:center}
+  .about-text p{margin-bottom:14px;color:#4d3a2a}
+  .about-text strong{color:var(--maroon)}
+  .about-points{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:20px}
+  .about-point{background:var(--card);border:1px solid #efdcbb;border-radius:14px;padding:14px 16px;box-shadow:var(--shadow)}
+  .about-point .ico{font-size:1.35rem}
+  .about-point b{display:block;color:var(--maroon);margin:4px 0 2px}
+  .about-point span{font-size:.88rem;color:var(--muted)}
+  .about-img{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);border:6px solid #fff}
+  .about-img img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/3.4}
+
+  /* Menu */
+  .menu-bg{background:linear-gradient(180deg,var(--cream-2),var(--cream))}
+  .menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .menu-card{
+    background:var(--card);border-radius:var(--radius);padding:26px 24px;
+    border:1px solid #efdcbb;box-shadow:var(--shadow);
+    border-top:5px solid var(--gold);
+  }
+  .menu-card .ico{font-size:2rem}
+  .menu-card h3{color:var(--maroon);font-size:1.22rem;margin:8px 0 12px}
+  .menu-card ul{list-style:none}
+  .menu-card li{padding:6px 0;border-bottom:1px dashed #ecd9ae;font-size:.96rem;color:#4d3a2a;display:flex;gap:8px}
+  .menu-card li:last-child{border-bottom:none}
+  .menu-card li::before{content:"✦";color:var(--saffron);font-size:.75rem;line-height:1.9}
+  .menu-note{text-align:center;color:var(--muted);margin-top:28px;font-size:.95rem}
+  .star-tag{
+    display:inline-block;background:#fdeeda;color:#9a6210;border:1px solid #f2cd8a;
+    font-size:.7rem;font-weight:700;border-radius:999px;padding:1px 9px;margin-left:auto;letter-spacing:.4px;
+  }
+
+  /* Gallery */
+  .gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .g-item{border-radius:var(--radius);overflow:hidden;position:relative;box-shadow:var(--shadow);aspect-ratio:4/3;background:#e9d9ba}
+  .g-item img{width:100%;height:100%;object-fit:cover;transition:transform .4s ease}
+  .g-item:hover img{transform:scale(1.06)}
+  .g-cap{
+    position:absolute;left:0;right:0;bottom:0;padding:26px 14px 10px;color:#fff;font-weight:600;font-size:.95rem;
+    background:linear-gradient(transparent,rgba(46,7,13,.78));
+  }
+  .g-tile{
+    display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;text-align:center;
+    color:#fff;padding:18px;
+  }
+  .g-tile .big{font-size:3.2rem}
+  .g-tile b{font-family:Georgia,serif;font-size:1.15rem}
+  .g-tile span{font-size:.88rem;opacity:.92}
+  .g-tile.saffron{background:linear-gradient(150deg,#f4a93c,#d97a16 60%,#b85c0a)}
+  .g-tile.maroon{background:linear-gradient(150deg,#9c2338,var(--maroon) 55%,var(--maroon-dark))}
+
+  /* Visit */
+  .visit-bg{background:linear-gradient(160deg,var(--maroon-dark),var(--maroon));color:#f7ead3}
+  .visit-bg .section-head h2{color:#ffd98a}
+  .visit-bg .section-head p{color:#ecd9ae}
+  .visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+  .visit-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,217,138,.35);border-radius:var(--radius);padding:28px}
+  .visit-card h3{color:#ffd98a;font-size:1.25rem;margin-bottom:16px}
+  table.hours{width:100%;border-collapse:collapse;font-size:.97rem}
+  table.hours td{padding:8px 4px;border-bottom:1px dashed rgba(255,217,138,.3)}
+  table.hours tr:last-child td{border-bottom:none}
+  table.hours td:last-child{text-align:right;font-weight:600;color:#fff}
+  .open-pill{display:inline-block;background:#1d7a3d;color:#dff5e4;font-size:.75rem;font-weight:700;border-radius:999px;padding:2px 10px;margin-left:8px;vertical-align:middle}
+  .visit-line{margin-bottom:14px;font-size:.99rem}
+  .visit-line b{color:#ffd98a}
+  .visit-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}
+  .btn-wa{background:#22b358;color:#fff;box-shadow:0 8px 20px rgba(0,0,0,.3)}
+
+  /* Footer */
+  footer{background:#2e070d;color:#d9c3a5;text-align:center;padding:42px 0 30px}
+  footer .f-name{font-family:Georgia,serif;font-size:1.45rem;color:#ffd98a}
+  footer p{font-size:.92rem;margin-top:6px}
+  footer .heart{color:#ff6b81}
+  footer .copy{margin-top:16px;font-size:.82rem;color:#a98d68}
+
+  /* Reveal animation */
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
+  .reveal.in{opacity:1;transform:none}
+
+  /* ---------- Responsive ---------- */
+  @media (max-width:900px){
+    .menu-grid{grid-template-columns:repeat(2,1fr)}
+    .gallery-grid{grid-template-columns:repeat(2,1fr)}
+    .about-grid,.visit-grid{grid-template-columns:1fr}
+  }
+  @media (max-width:640px){
+    .burger{display:block}
+    .nav-links{
+      display:none;position:absolute;top:100%;left:0;right:0;
+      flex-direction:column;align-items:flex-start;gap:0;
+      background:var(--maroon-dark);padding:10px 20px 16px;
+    }
+    .nav-links.open{display:flex}
+    .nav-links li{width:100%;padding:9px 0;border-bottom:1px solid rgba(255,217,138,.18)}
+    .nav-links li:last-child{border-bottom:none}
+    header .wrap{position:relative}
+    .menu-grid,.gallery-grid{grid-template-columns:1fr}
+    .about-points{grid-template-columns:1fr}
+    section{padding:54px 0}
+    .hero{padding:60px 0 56px}
+  }
+</style>
+</head>
+<body>
+
+<!-- ================= NAV ================= -->
+<header>
+  <div class="wrap">
+    <nav class="nav" aria-label="Main">
+      <a class="brand" href="#top">
+        <span class="brand-badge">🍬</span>
+        <span>
+          <span class="brand-name">RajLuxmi</span><br>
+          <span class="brand-sub">Sweets &amp; Restaurant</span>
+        </span>
+      </a>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#visit">Visit Us</a></li>
+        <li><a class="call-btn" href="tel:+917348022222">📞 Call Now</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<div class="hero" id="top">
+  <div class="wrap">
+    <div class="om">॥ श्री ॥</div>
+    <h1>RajLuxmi <span class="gold">Sweets</span><br>&amp; Restaurant</h1>
+    <p class="tagline">“Mithaas aur Swaad, 2004 se”</p>
+    <p class="sub">Alambagh ki pehchan — shudh shakahari mithai, bakery aur restaurant. Subah ki jalebi se lekar raat ke khane tak, har swaad ek hi chhat ke neeche.</p>
+    <div class="cta-row">
+      <a class="btn btn-gold" href="tel:+917348022222">📞 Call Now</a>
+      <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&amp;query=RajLuxmi%20Sweets%20%26%20Restaurant%2C%20Kanpur%20Road%2C%20Alambagh%2C%20Lucknow%20226005" target="_blank" rel="noopener">📍 Get Directions</a>
+    </div>
+    <div class="badges">
+      <span class="badge"><span class="dot">●</span> 100% Pure Veg</span>
+      <span class="badge">🏆 Since 2004</span>
+      <span class="badge">📍 Alambagh, Lucknow</span>
+      <span class="badge">🕙 Open All Days</span>
+    </div>
+  </div>
+</div>
+
+<!-- ================= ABOUT ================= -->
+<section id="about">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="kicker">Hamari Kahani</div>
+      <h2>Do Dashaak se Lucknow ki Mithaas</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p><strong>RajLuxmi Sweets &amp; Restaurant</strong> 2004 se Alambagh, Lucknow me mithaas aur swaad ka bharosa bana hua hai. Chander Nagar Gate ke saamne, Alambagh Metro Station ke paas sthit hamari dukaan sirf ek mithai ki shop nahi — ek poora family restaurant hai.</p>
+        <p>Yahan ek hi jagah milti hai taazi <strong>mithai aur bakery</strong> ke saath <strong>North Indian, Awadhi, South Indian, Chinese aur street food</strong> ki poori range — sab kuch shudh shakahari. Tyohar ki mithaas ho, bachon ke birthday ka cake, ya parivaar ke saath shaam ka khana — RajLuxmi har mauke ka saathi hai.</p>
+        <div class="about-points">
+          <div class="about-point">
+            <span class="ico">🍬</span><b>Taazi Mithai Roz</b>
+            <span>Roz banti taazi mithai aur bakery items</span>
+          </div>
+          <div class="about-point">
+            <span class="ico">🥗</span><b>Shudh Shakahari</b>
+            <span>100% pure veg khana aur mithai</span>
+          </div>
+          <div class="about-point">
+            <span class="ico">👨‍👩‍👧‍👦</span><b>Family Place</b>
+            <span>Parivaar ke saath baith kar khane ki jagah</span>
+          </div>
+          <div class="about-point">
+            <span class="ico">🚇</span><b>Metro ke Paas</b>
+            <span>Alambagh Metro Station ke bilkul nazdeek</span>
+          </div>
+        </div>
+      </div>
+      <div class="about-img reveal">
+        <img src="mithai-thali.jpg" alt="Assorted Indian mithai thali at RajLuxmi Sweets &amp; Restaurant" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MENU ================= -->
+<section id="menu" class="menu-bg">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="kicker">Menu Highlights</div>
+      <h2>Har Swaad, Ek Hi Jagah</h2>
+      <p>Mithai se lekar main course tak — hamari sabse pasandeeda categories aur unke mashhoor items.</p>
+      <div class="divider"></div>
+    </div>
+    <div class="menu-grid">
+      <div class="menu-card reveal">
+        <span class="ico">🍬</span>
+        <h3>Sweets &amp; Mithai</h3>
+        <ul>
+          <li>Mewa Bite <span class="star-tag">★ Popular</span></li>
+          <li>Kaju Katli</li>
+          <li>Motichoor Ladoo</li>
+          <li>Gulab Jamun</li>
+          <li>Jalebi (Garam)</li>
+          <li>Seasonal Mithai Variety</li>
+        </ul>
+      </div>
+      <div class="menu-card reveal">
+        <span class="ico">🎂</span>
+        <h3>Bakery &amp; Cakes</h3>
+        <ul>
+          <li>Rainbow Cake <span class="star-tag">★ Popular</span></li>
+          <li>Birthday &amp; Celebration Cakes</li>
+          <li>Pastries</li>
+          <li>Fresh Baked Goods</li>
+          <li>Cookies &amp; Rusks</li>
+        </ul>
+      </div>
+      <div class="menu-card reveal">
+        <span class="ico">🍛</span>
+        <h3>North Indian &amp; Awadhi</h3>
+        <ul>
+          <li>Veg Biryani <span class="star-tag">★ Popular</span></li>
+          <li>Paneer Specialities</li>
+          <li>Dal Tadka / Dal Makhani</li>
+          <li>Seasonal Sabzi</li>
+          <li>Tandoori Roti &amp; Naan</li>
+          <li>Jeera Rice</li>
+        </ul>
+      </div>
+      <div class="menu-card reveal">
+        <span class="ico">🥞</span>
+        <h3>South Indian</h3>
+        <ul>
+          <li>Masala Dosa</li>
+          <li>Idli Sambar</li>
+          <li>Uttapam</li>
+          <li>Vada Sambar</li>
+          <li>Filter Coffee</li>
+        </ul>
+      </div>
+      <div class="menu-card reveal">
+        <span class="ico">🍜</span>
+        <h3>Chinese &amp; Fast Food</h3>
+        <ul>
+          <li>Spring Rolls <span class="star-tag">★ Popular</span></li>
+          <li>Hakka Noodles</li>
+          <li>Veg Manchurian</li>
+          <li>Fried Rice</li>
+          <li>Burger &amp; Sandwich</li>
+        </ul>
+      </div>
+      <div class="menu-card reveal">
+        <span class="ico">🥟</span>
+        <h3>Street Food &amp; Snacks</h3>
+        <ul>
+          <li>Samosa <span class="star-tag">★ Popular</span></li>
+          <li>Kachori Sabzi</li>
+          <li>Aloo Tikki Chaat</li>
+          <li>Pani Puri (Golgappe)</li>
+          <li>Chole Bhature</li>
+          <li>Pav Bhaji</li>
+        </ul>
+      </div>
+    </div>
+    <p class="menu-note">Menu me items season aur availability ke hisaab se badal sakte hain. Aaj ka fresh menu jaanne ke liye humein call karein — <a href="tel:+917348022222" style="color:var(--maroon);font-weight:700">+91 73480 22222</a></p>
+  </div>
+</section>
+
+<!-- ================= GALLERY ================= -->
+<section id="gallery">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="kicker">Gallery</div>
+      <h2>Swaad ki Jhalak</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="gallery-grid">
+      <div class="g-item reveal">
+        <img src="mithai-thali.jpg" alt="Assorted mithai thali" loading="lazy">
+        <div class="g-cap">Mithaas ki Thali</div>
+      </div>
+      <div class="g-item reveal">
+        <img src="samosa-plate.jpg" alt="Crispy samosas with chutneys" loading="lazy">
+        <div class="g-cap">Garam Samosa &amp; Chutney</div>
+      </div>
+      <div class="g-item reveal">
+        <img src="cake-display.jpg" alt="Cakes and pastries display" loading="lazy">
+        <div class="g-cap">Cakes &amp; Bakery</div>
+      </div>
+      <div class="g-item reveal">
+        <img src="veg-thali.jpg" alt="North Indian vegetarian thali" loading="lazy">
+        <div class="g-cap">North Indian Thali</div>
+      </div>
+      <div class="g-item g-tile saffron reveal">
+        <span class="big">🪔</span>
+        <b>Tyoharon ki Mithaas</b>
+        <span>Diwali, Rakhi aur har tyohar ke liye khaas mithai aur gift packs</span>
+      </div>
+      <div class="g-item g-tile maroon reveal">
+        <span class="big">🎉</span>
+        <b>Har Mauka Khaas</b>
+        <span>Birthday cakes, party orders aur parivaar ki har khushi ke liye RajLuxmi</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= VISIT US ================= -->
+<section id="visit" class="visit-bg">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="kicker">Visit Us</div>
+      <h2>Aaiye, Miliye, Swaad Lijiye</h2>
+      <p>Hum hafte ke saaton din khule hain — Alambagh Metro Station ke paas.</p>
+      <div class="divider"></div>
+    </div>
+    <div class="visit-grid">
+      <div class="visit-card reveal">
+        <h3>🕙 Opening Hours</h3>
+        <table class="hours">
+          <tr><td>Monday <span class="open-pill">Open</span></td><td>10:00 AM – 11:00 PM</td></tr>
+          <tr><td>Tuesday</td><td>10:00 AM – 11:00 PM</td></tr>
+          <tr><td>Wednesday</td><td>10:00 AM – 11:00 PM</td></tr>
+          <tr><td>Thursday</td><td>10:00 AM – 11:00 PM</td></tr>
+          <tr><td>Friday</td><td>10:00 AM – 11:00 PM</td></tr>
+          <tr><td>Saturday</td><td>10:00 AM – 11:00 PM</td></tr>
+          <tr><td>Sunday</td><td>10:00 AM – 11:00 PM</td></tr>
+        </table>
+        <p class="visit-line" style="margin-top:16px">💰 <b>Cost for two:</b> ₹350–₹650 for two (approx)</p>
+      </div>
+      <div class="visit-card reveal">
+        <h3>📍 Reach Us</h3>
+        <p class="visit-line"><b>Address:</b><br>Opposite Chander Nagar Gate, Moni Baba Market,<br>Kanpur Road, Alambagh, Lucknow,<br>Uttar Pradesh 226005<br><span style="opacity:.85">(Near Alambagh Metro Station)</span></p>
+        <p class="visit-line"><b>Phone:</b> <a href="tel:+917348022222" style="color:#fff;font-weight:700">+91 73480 22222</a></p>
+        <div class="visit-actions">
+          <a class="btn btn-gold" href="tel:+917348022222">📞 Call Now</a>
+          <a class="btn btn-wa" href="https://wa.me/917348022222" target="_blank" rel="noopener">💬 WhatsApp</a>
+          <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&amp;query=RajLuxmi%20Sweets%20%26%20Restaurant%2C%20Kanpur%20Road%2C%20Alambagh%2C%20Lucknow%20226005" target="_blank" rel="noopener">📍 Get Directions</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="wrap">
+    <div class="f-name">RajLuxmi Sweets &amp; Restaurant</div>
+    <p>Opposite Chander Nagar Gate, Moni Baba Market, Kanpur Road, Alambagh, Lucknow — 226005</p>
+    <p>📞 <a href="tel:+917348022222" style="color:#ffd98a">+91 73480 22222</a> &nbsp;•&nbsp; 🕙 10:00 AM – 11:00 PM, Open All Days</p>
+    <p style="margin-top:14px">Made with <span class="heart">❤️</span> in Lucknow</p>
+    <p class="copy">© 2026 RajLuxmi Sweets &amp; Restaurant. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  // Mobile menu toggle
+  var burger = document.getElementById('burger');
+  var navLinks = document.getElementById('navLinks');
+  burger.addEventListener('click', function () {
+    var open = navLinks.classList.toggle('open');
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  navLinks.addEventListener('click', function (e) {
+    if (e.target.tagName === 'A') navLinks.classList.remove('open');
+  });
+
+  // Scroll-reveal animation
+  var revealEls = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach(function (el) { io.observe(el); });
+  } else {
+    revealEls.forEach(function (el) { el.classList.add('in'); });
+  }
+</script>
+</body>
+</html>
